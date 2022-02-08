@@ -15,14 +15,7 @@ resource "aws_instance" "WebServer" {
   ami                    = "ami-00ae935ce6c2aa534" # ID of AWS AMI
   instance_type          = "t2.micro"              # type of instance
   vpc_security_group_ids = [aws_security_group.my_webserver.id]
-  user_data              = <<EOF
-#!bin/bash
-yum -y update
-yum -y install httpd
-echo "<h2>WebServer with ip: $(hostname -f)</h2><br>Built with Terraform!" > var/www/html/index.html
-sudo service httpd start
-chkconfig httpd on
-EOF
+  user_data              = file("user_data.sh") # used external script
   tags = {
     Name    = "Web Server"
     Owner   = "Alexandr Butylin"

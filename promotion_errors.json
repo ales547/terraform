@@ -1,0 +1,10 @@
+{
+  "errors": [
+    {
+      "key": "nightly/20220408-2014/753.109.0/SPARTA.RW/sdcard/SPARTA.RW/Data/NavDB.PHL_2514_E/0/BMD.NDS",
+      "message": "There are different ETags.",
+      "sourceValue": "ae24bf5f0d42df79c1a6604adf009bca",
+      "targetValue": "a5b6ebee552a07eda377f33cce70c5ec-1"
+    }
+  ]
+}
